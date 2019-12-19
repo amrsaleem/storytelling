@@ -36,9 +36,10 @@
         </div>
                                     <div class="background">
                      <div class="container content">
+                         <div>
                 <i class="fas fa-bars"></i>
                 <a class="stories">Stories <br>We Like. </a>
-                
+                </div>
                 <section class="cards">
                     
 <!--                    <img src="images/backgrounds/map.png" >-->
@@ -338,7 +339,8 @@
                          
         
         <footer>
-            <img src="images/background-footer.png"/>
+            <div>
+             <img src="images/background-footer.png"/>
                     <div class="container">
                         <div class="row">
                         <ul class="footer-link">
@@ -351,7 +353,6 @@
                         </ul>
                 </div>
                 <div class="row">
-
                         <ul class="social-icons">
                             <li><i class="fab fa-twitter"></i></li> 
                             <li><i class="fab fa-facebook-f"></i></li>
@@ -363,15 +364,19 @@
                             <div class="container">
                                 <div class="row">
                               
-                                 <a class="copyright">&copy; Copyright 2018., All Rights Reserved.</a>
+                                 <span class="copyright">&copy; Copyright 2018., All Rights Reserved.</span>
                                 </div>
                                 <div class="row">
-                                                                    <a class="blue"><img  src="images/logo-blue.png"></a>
 
-                                <a class="designby">Designed & Developed by</a>
+                                <span class="designby">Designed & Developed by</span>
+                                <span class="blue"><img  src="images/logo-blue.png"></span>
+
+                                    <div class="clearfix"></div>
                             </div>
+                                                                    <div class="clearfix"></div>
+
             </div>
-            
+            </div>
             
             <script src="owlcarousel/docs_src/assets/vendors/jquery.min.js"></script>
             <script src="owlcarousel/dist/owl.carousel.min.js"></script>
@@ -379,10 +384,22 @@
                         $(document).ready(function(){
                                     $(".owl-carousel").owlCarousel( {
                                             loop:false,
-                                            margin:10,
                                             nav:false,
-                                        items:3,
                                         dots:false,
+                                        responsiveClass:true,
+                                        responsive:{
+                                            0:{
+                                                items:1
+                                            },
+                                            400:{
+                                                items:2,
+                                            },
+                                            768:{
+                                                items:4
+                                            }
+                                            
+                                        }
+                                        
                                         });
                                                  });
                                                 </script>
